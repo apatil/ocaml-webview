@@ -1,0 +1,25 @@
+opam-version: "1.2"
+name: "webview"
+version: "0.0.1"
+maintainer: "Anand Patil <anand.prabhakar.patil@gmail.com>"
+authors: [
+  "Anand Patil <anand.prabhakar.patil@gmail.com>"
+]
+homepage: "https://github.com/apatil/ocaml-webview"
+bug-reports: "https://github.com/apatil/ocaml-webview"
+license: "MIT"
+dev-repo: "https://github.com/apatil/ocaml-webview.git"
+build: [ [make "all"] ]
+install: [make "install"]
+remove: ["ocamlfind" "remove" "webview"]
+depends: [
+  "ocamlfind" {build}
+  "ctypes" {>= "0.13.0" & <= "0.14.0"}
+  "ctypes-foreign" {>= "0.4.0" & <= "0.5.0"}
+]
+
+depexts: [
+  [["ubuntu"] ["libwebkitgtk-3.0-dev" "libgtk-3.0-dev"]]
+]
+
+available: [ ocaml-version >= "4.03.0" ]

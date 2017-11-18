@@ -1,0 +1,10 @@
+# OASIS_START
+version = "0.0.1"
+description = "Pop open a web view from OCaml"
+
+requires = "ctypes,ctypes.foreign"
+archive(byte) = "webview.cma"
+archive(native) = "webview.cmxa"
+exists_if = "webview.cma"
+
+# OASIS_STOP
